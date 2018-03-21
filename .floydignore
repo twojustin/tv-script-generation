@@ -12,3 +12,10 @@ var
 *.pyc
 *.swp
 .DS_Store
+
+*.p
+*.data-*
+*.index
+*.meta
+.ipynb_checkpoints
+checkpoint
