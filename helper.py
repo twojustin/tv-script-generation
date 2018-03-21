@@ -12,7 +12,25 @@ def load_data(path):
 
     return data
 
+def preprocess_and_save_text(text, token_lookup, create_lookup_tables):
+    token_dict = token_lookup()
+    for key, token in token_dict.items():
+        print('key', key)
+        text = text.replace(key, ' {} '.format(token))
 
+    print('lower')
+    text = text.lower()
+    print('split')
+    text = text.split()
+
+    print('create lookup')
+    vocab_to_int, int_to_vocab = create_lookup_tables(text)
+    print('to int')
+    int_text = [vocab_to_int[word] for word in text]
+    print('pickle')
+    pickle.dump((int_text, vocab_to_int, int_to_vocab, token_dict), open('preprocess.p', 'wb'))
+
+    
 def preprocess_and_save_data(dataset_path, token_lookup, create_lookup_tables):
     """
     Preprocess Text Data
@@ -22,17 +40,7 @@ def preprocess_and_save_data(dataset_path, token_lookup, create_lookup_tables):
     # Ignore notice, since we don't use it for analysing the data
     text = text[81:]
 
-    token_dict = token_lookup()
-    for key, token in token_dict.items():
-        text = text.replace(key, ' {} '.format(token))
-
-    text = text.lower()
-    text = text.split()
-
-    vocab_to_int, int_to_vocab = create_lookup_tables(text)
-    int_text = [vocab_to_int[word] for word in text]
-    pickle.dump((int_text, vocab_to_int, int_to_vocab, token_dict), open('preprocess.p', 'wb'))
-
+    preprocess_and_save_text(text, token_lookup, create_lookup_tables)
 
 def load_preprocess():
     """
