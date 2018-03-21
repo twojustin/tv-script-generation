@@ -8,3 +8,5 @@ __pycache__
 *.index
 *.meta
 *.zip
+
+the-simpsons-by-the-data/*.csv
