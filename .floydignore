@@ -12,6 +12,7 @@ var
 *.pyc
 *.swp
 .DS_Store
+__pycache__
 
 *.p
 *.data-*
@@ -19,3 +20,6 @@ var
 *.meta
 .ipynb_checkpoints
 checkpoint
+.zip
+
+the-simpsons-by-the-data/*.csv

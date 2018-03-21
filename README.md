@@ -11,6 +11,10 @@ full script data is avaiable at [kaggle](https://www.kaggle.com/wcukierski/the-s
 ### to run jupyter in `floydhub`:
 ```
 floyd run --mode jupyter --gpu
+floyd run \
+  --data twojustin/datasets/the-simpsons-by-the-data/1:the-simpsons-by-the-data \
+  --mode \
+  jupyter --gpu
 ```
 
 ### download results back to local:
