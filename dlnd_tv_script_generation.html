@@ -12497,7 +12497,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">):</span>
@@ -12576,19 +12576,19 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># RNN Size</span>
-<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="c1"># Embedding Dimension Size</span>
-<span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># Sequence Length</span>
-<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">80</span>
+<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">12</span>
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="c1"># Show stats for every n number of batches</span>
@@ -12616,7 +12616,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12666,7 +12666,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12716,16 +12716,21 @@ Default GPU Device: /gpu:0
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/6   train_loss = 8.838
-Epoch  10 Batch    0/6   train_loss = 2.611
-Epoch  20 Batch    0/6   train_loss = 0.968
-Epoch  30 Batch    0/6   train_loss = 0.319
-Epoch  40 Batch    0/6   train_loss = 0.073
-Epoch  50 Batch    0/6   train_loss = 0.038
-Epoch  60 Batch    0/6   train_loss = 0.032
-Epoch  70 Batch    0/6   train_loss = 0.029
-Epoch  80 Batch    0/6   train_loss = 0.027
-Epoch  90 Batch    0/6   train_loss = 0.026
+<pre>Epoch   0 Batch    0/44   train_loss = 8.849
+Epoch   1 Batch   16/44   train_loss = 4.528
+Epoch   2 Batch   32/44   train_loss = 3.497
+Epoch   4 Batch    4/44   train_loss = 2.729
+Epoch   5 Batch   20/44   train_loss = 2.150
+Epoch   6 Batch   36/44   train_loss = 1.747
+Epoch   8 Batch    8/44   train_loss = 1.197
+Epoch   9 Batch   24/44   train_loss = 0.823
+Epoch  10 Batch   40/44   train_loss = 0.602
+Epoch  12 Batch   12/44   train_loss = 0.547
+Epoch  13 Batch   28/44   train_loss = 0.456
+Epoch  15 Batch    0/44   train_loss = 0.384
+Epoch  16 Batch   16/44   train_loss = 0.420
+Epoch  17 Batch   32/44   train_loss = 0.398
+Epoch  19 Batch    4/44   train_loss = 0.359
 Model Trained and Saved
 </pre>
 </div>
@@ -12746,7 +12751,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12771,7 +12776,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12809,7 +12814,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
@@ -12865,7 +12870,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
@@ -12875,7 +12880,9 @@ Model Trained and Saved
 <span class="sd">    :param int_to_vocab: Dictionary of word ids as the keys and words as the values</span>
 <span class="sd">    :return: String of the predicted word</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)]</span>
+    <span class="c1"># add randomness to prevent getting stuck in loop</span>
+    <span class="n">predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">int_to_vocab</span><span class="p">)),</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">probabilities</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">int_to_vocab</span><span class="p">[</span><span class="n">predict</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12917,12 +12924,12 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="c1"># homer_simpson, moe_szyslak, or Barney_Gumble</span>
-<span class="n">prime_word</span> <span class="o">=</span> <span class="s1">&#39;homer_simpson&#39;</span>
+<span class="n">prime_word</span> <span class="o">=</span> <span class="s1">&#39;moe_szyslak&#39;</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12981,30 +12988,26 @@ Model Trained and Saved
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from ./save
-homer_simpson:(casual) oh, yeah. i&#39;m a real expert.
-moe_szyslak: what is that? a six-barrel hollye carb?
-homer_simpson: you betcha.
-moe_szyslak: edelbrock intakes...
-homer_simpson: nothin&#39; but.
-moe_szyslak: meyerhof lifters...
-homer_simpson: oh yeah.
-moe_szyslak: i made that last one up.
-homer_simpson:(keeping dignity) i see.
+moe_szyslak: legally, i can&#39;t say.
+barney_gumble: to a drunk man, drive like me.
+moe_szyslak: their choice.
+homer_simpson: well, if it isn&#39;t little bart.(scratching maggie&#39;s chin)
+moe_szyslak:(surprised) you wanna know, you say if you&#39;d smile once in?
 
 
-moe_szyslak: sounds like you&#39;re having a rough rough a minute.
-
-
-moe_szyslak:(hostile) hey homer, i told you not to come &#39;round here no more till you paid your tab. or at least cleaned up that.
-moe_szyslak: oh, speakin&#39; of which, let&#39;s get these eggs back in my last secret place!(points)
-homer_simpson:(still dancing) all right, it&#39;s closing time. who&#39;s paying the tab?
-computer_voice_2: i am.
-hawking: i didn&#39;t say that.
-homer_simpson:(computer voice) yes, i did.
-homer_simpson: larry flynt is right! you guys stink!
-
-
-lenny_leonard: hey, ain&#39;t that homer
+kent_brockman: and tonight to get out of the air...
+homer_simpson:(cutting)&#34; the deer hunter.&#34;
+moe_szyslak: you&#39;re right, beautiful what&#39;s right there.
+moe_szyslak: no, it&#39;s true. i&#39;ve got their names written.
+barney_gumble:(sighs) how embarrassing. but how did this love that?
+apu_nahasapeemapetilon: well, it was better like to me.
+chief_wiggum: we never follow your duff?
+marge_simpson: i wrote a poem for barney on this special occasion.
+moe_szyslak: yeah, i was gonna say his name, moe.
+moe_szyslak: uh, where you do the food, here.
+homer_simpson: all right.(dejected)
+homer_simpson:(happy) so good to be being a spine or here.
+moe_szyslak:
 </pre>
 </div>
 </div>
